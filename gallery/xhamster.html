@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <title>Xhamster Gallery</title>
+   
+
+    <!-- All Stylesheets -->
+    <script src="../assets/js/alpine.min.js"></script>
+    <script src="../assets/js/tailwind.js"></script>
+    <script src="../assets/js/inner-script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- navigation start -->
+    <nav id="site-header"></nav>
+    <!-- navigation end -->
+
+    <main>
+        <div class="bg-gray-200 py-12 relative"> 
+            <div class="container mx-auto">
+                <h1 class="h1 text-black">Xhamster Gallery</h1>
+            </div>  
+        </div>
+        <div class="py-10 min-h-screen">
+            <div class="container-fluid mx-auto px-10">
+                 
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 gap-3" id="galleryGrid"> 
+                </div>
+
+ 
+
+            </div><!--.container-->
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer id="site-footer"></footer>
+
+    <script>
+        const galleryArray = [
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764631031/raitorani_ucp0fj.webp",
+                "alt": "Raitorani"
+            },
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764631764/raitorani-2_f7z8ej.webp",
+                "alt": "Raitorani"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764633010/Horrny-Archana_kmhpef.webp",
+                "alt": "Horrny-Archana"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764632644/next-short_jcqi8j.webp",
+                "alt": "Next Short"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764632879/deybersex_eaxhgg.webp",
+                "alt": "deybersex"
+            }, 
+        ];
+        const galleryGrid = document.getElementById('galleryGrid');
+        galleryArray.forEach((item, index) => {
+            galleryGrid.innerHTML += `
+                <a href="${item.image}" class="galleryItem text-black text-sm font-bold relative bg-gray-300">
+                    <img src="${item.image}" alt="${item.alt}" class="w-full aspect-video object-cover relative z-10" width="600" height="400">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-900 px-2 py-1 text-base rounded">ছবি ${index + 1}</span>
+                    <span class="absolute bottom-0 left-0 p-4 z-20 text-white block p-4 text-base lg:text-lg bg-black/10 w-full">${item.alt}</span>
+                </a>
+            `;
+        });
+    </script>
+    <script>
+        $(function(){ 
+
+            $('.galleryItem').magnificPopup({
+                type: 'image',
+                mainClass: 'mfp-with-zoom', 
+                gallery:{ enabled:true
+                    },
+                
+                zoom: {
+                    enabled: true,  
+                    duration: 300, // duration of the effect, in milliseconds
+                    easing: 'ease-in-out', // CSS transition easing function 
+                    opener: function(openerElement) { 
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                    }
+                } 
+            });
+        });
+    </script> 
+</body>
+
+</html>
