@@ -63,8 +63,9 @@
         const galleryGrid = document.getElementById('galleryGrid');
         galleryArray.forEach((item, index) => {
             galleryGrid.innerHTML += `
-                <a href="${item.image}" class="galleryItem text-black text-sm font-bold relative">
-                    <img src="${item.image}" alt="${item.alt}" class="w-full h-full object-cover">
+                <a href="${item.image}" class="galleryItem text-black text-sm font-bold relative bg-gray-300">
+                    <img src="${item.image}" alt="${item.alt}" class="w-full h-full object-cover relative z-10" width="600" height="400">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-900 px-2 py-1 text-base rounded">ছবি ${index + 1}</span>
                 </a>
             `;
         });
