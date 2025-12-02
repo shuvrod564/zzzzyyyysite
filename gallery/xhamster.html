@@ -35,7 +35,7 @@
         <div class="py-10 min-h-screen">
             <div class="container-fluid mx-auto px-10">
                  
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 gap-3" id="galleryGrid"> 
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 gap-2" id="galleryGrid"> 
                 </div>
 
  
@@ -106,14 +106,42 @@
                 "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764635923/Aaka3_v4i0cq.webp",
                 "alt": "Aaka"
             }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764648026/Ananyabhabi_gim3vl.webp",
+                "alt": "Ananyabhabi"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764648707/Hotmaster21_lvpn1h.webp",
+                "alt": "Hotmaster21"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764649104/Rani_Mondal_siynxg.webp",
+                "alt": "Rani Mondal"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764649106/Rani_Mondal_2_oytntw.webp",
+                "alt": "Rani Mondal"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764649540/Rani_Mondal_3_zqzbna.webp",
+                "alt": "Rani Mondal"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764650035/Lalita_Singh_b5i0rm.webp",
+                "alt": "Lalita Singh"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764650037/Lalita_Singh_2_so9w3i.webp",
+                "alt": "Lalita Singh"
+            }, 
         ];
         const galleryGrid = document.getElementById('galleryGrid');
         galleryArray.forEach((item, index) => {
             galleryGrid.innerHTML += `
-                <a href="${item.image}" class="galleryItem text-black text-sm font-bold relative bg-gray-300">
+                <a href="${item.image}" class="galleryItem text-black text-sm font-medium relative bg-gray-300 group">
                     <img src="${item.image}" alt="${item.alt}" class="w-full aspect-video object-cover relative z-10" width="600" height="400">
                     <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-900 px-2 py-1 text-base rounded">ছবি ${index + 1}</span>
-                    <span class="absolute bottom-0 left-0 p-4 z-20 text-white block p-4 text-base lg:text-lg bg-black/10 w-full">${item.alt}</span>
+                    <span class="absolute bottom-0 left-0 z-20 text-white block p-3 text-base lg:text-lg bg-black/0 w-full opacity-0 group-hover:opacity-100">${item.alt}</span>
                 </a>
             `;
         });
