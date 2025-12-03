@@ -48,33 +48,35 @@
     <!-- Footer -->
     <footer id="site-footer"></footer>
 
+
+
+
+
+
     <script>
         const galleryArray = [
             {
-                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764631031/raitorani_ucp0fj.webp",
-                "alt": "Xhamster",
-                "url": "xhamster.html",
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764788881/%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8_%E0%A6%AC%E0%A7%8C_xshdhd.png",
+                "alt": "Dhakar Magi"
             },
+             
             {
-                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764614159/dhakar-magi-2_pklsfv.png",
-                "alt": "Dhakar Magi",
-                "url": "magi-image.html",
-            }, 
-            {
-                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764614159/dhakar-magi-2_pklsfv.png",
-                "alt": "Bhabi",
-                "url": "sexy-bhabi.html",
-            }, 
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764789765/Israt_Akhi_fzvfiq.png",
+                "alt": "Dhakar Magi"
+            },
+            // {
+            //     "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764789195/%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8_-_%E0%A6%AC%E0%A7%8C_zacuct.png",
+            //     "alt": "Dhakar Magi"
+            // },
+           
              
         ];
         const galleryGrid = document.getElementById('galleryGrid');
         galleryArray.forEach((item, index) => {
             galleryGrid.innerHTML += `
-                <a href="${item.url}" class="block text-black text-sm font-bold relative bg-gray-300">
-                    <img src="${item.image}" alt="${item.alt}" class="w-full aspect-video object-cover relative z-10" width="600" height="400">
+                <a href="${item.image}" class="galleryItem text-black text-sm font-bold relative bg-gray-300">
+                    <img src="${item.image}" alt="${item.alt}" class="w-full h-full object-cover relative z-10" width="600" height="400">
                     <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-900 px-2 py-1 text-base rounded">ছবি ${index + 1}</span>
-                    <span class="absolute bottom-0 left-0 p-4 z-20 text-white block p-4 text-base lg:text-lg bg-black/40 w-full">${item.alt}</span>
-                    
                 </a>
             `;
         });
