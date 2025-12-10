@@ -64,10 +64,22 @@
                 "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764789765/Israt_Akhi_fzvfiq.png",
                 "alt": "Dhakar Magi"
             },
-            // {
-            //     "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1764789195/%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8_-_%E0%A6%AC%E0%A7%8C_zacuct.png",
-            //     "alt": "Dhakar Magi"
-            // },
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1765357538/desi-wife_gsru3d.jpg",
+                "alt": "Dhakar Magi"
+            },
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1765366045/porimoni-magi_fjjken.jpg",
+                "alt": "Dhakar Magi"
+            },
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1765368701/%E0%A6%AE%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE_%E0%A6%86%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0_vhol0b.png",
+                "alt": "মারিয়া আক্তার"
+            },
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/image/upload/v1765370597/desi-girl_n7m576.jpg",
+                "alt": "মারিয়া আক্তার"
+            },
            
              
         ];
@@ -75,7 +87,7 @@
         galleryArray.forEach((item, index) => {
             galleryGrid.innerHTML += `
                 <a href="${item.image}" class="galleryItem text-black text-sm font-bold relative bg-gray-300">
-                    <img src="${item.image}" alt="${item.alt}" class="w-full h-full object-cover relative z-10" width="600" height="400">
+                    <img src="${item.image}" alt="${item.alt}" class="w-full aspect-video object-contain relative z-10" width="600" height="400">
                     <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-900 px-2 py-1 text-base rounded">ছবি ${index + 1}</span>
                 </a>
             `;

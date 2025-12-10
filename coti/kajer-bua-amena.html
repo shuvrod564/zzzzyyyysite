@@ -33,10 +33,9 @@
             </div>
         </div>
         <div class="py-10">
-            <div class="container mx-auto">
-                <img src="images/khalake-cudar-golpo.jpg"
-                    class="w-full max-w-[800px] h-full object-cover float-end ml-5 mb-6">
-
+            <div class="container mx-auto" id="banglaStory">
+               <button onclick="playAudio()">🔊 গল্পটি শুনুন (Play Audio)</button>
+        <button onclick="stopAudio()" style="background-color: #dc3545;">⏹ বন্ধ করুন (Stop)</button>
                 <div>
                     ছোট বেলার কাজের মেয়ে আমেনা বুয়া। আমি হয়ার আগ থেকে ছিল। এখন আর কাজের মেয়ে নেই, বয়স হওয়ার পর বুয়া হয়ে
                     গেছে। বয়স ২০ এর কোঠায়। ছোট কাল থেকে আছে বলে খুব আদর যত্ন করতো। আর বুয়ার শরীর নিয়ে কথা বলতে গেলে এখনও
@@ -215,6 +214,32 @@
 
     <!-- Footer -->
     <footer id="site-footer"></footer>
+
+    <script>
+        function playAudio() {
+            // 1. Get the text from the paragraph
+            var text = document.getElementById("banglaStory").innerText;
+
+            // 2. Create a new SpeechSynthesisUtterance object
+            var utterance = new SpeechSynthesisUtterance(text);
+
+            // 3. Set the language to Bengali
+            // Use 'bn-BD' for Bangladeshi accent or 'bn-IN' for Indian accent
+            utterance.lang = 'bn-BD'; 
+
+            // 4. Optional: Adjust speed (0.1 to 10) and pitch (0 to 2)
+            utterance.rate = 0.9; // Slightly slower for better storytelling
+            utterance.pitch = 1;
+
+            // 5. Speak the text
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function stopAudio() {
+            // Stop speaking immediately
+            window.speechSynthesis.cancel();
+        }
+    </script>
 </body>
 
 </html>
