@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <title>Xhamster Gallery</title>
+   
+
+    <!-- All Stylesheets -->
+    <script src="../assets/js/alpine.min.js"></script>
+    <script src="../assets/js/tailwind.js"></script>
+    <script src="../assets/js/inner-script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- navigation start -->
+    <nav id="site-header"></nav>
+    <!-- navigation end -->
+
+    <main>
+        <div class="bg-gray-200 py-12 relative"> 
+            <div class="container mx-auto">
+                <h1 class="h1 text-black">Xhamster Gallery</h1>
+            </div>  
+        </div>
+        <div class="py-10 min-h-screen">
+            <div class="container mx-auto px-10">
+                 
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 gap-2" id="galleryGrid"> 
+                </div>
+
+ 
+
+            </div><!--.container-->
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer id="site-footer"></footer>
+
+    <script>
+        const galleryArray = [
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765384793/magi-auto-1_i1qq3x.mp4",
+                "alt": "নারায়ণগঞ্জের কচি মাগি"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765384798/magi-auto-2_fhhv5a.mp4",
+                "alt": "নারায়ণগঞ্জের কচি মাগি"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765384791/magi-auto-3_n1yrtc.mp4",
+                "alt": "নারায়ণগঞ্জের কচি মাগি"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765389288/rater-magi_k6l3yu.mp4",
+                "alt": "নারায়ণগঞ্জের কচি মাগি"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765389319/rater-magi-2_rke6qx.mp4",
+                "alt": "নারায়ণগঞ্জের কচি মাগি"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765404993/sonali-magi-rangpur_iuu91b.mp4",
+                "alt": "ডবকা মাগি হোটেলে নিয়ে চুদন"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765405418/sonali-magi-rangpur-2_oncwda.mp4",
+                "alt": "ডবকা মাগি হোটেলে নিয়ে চুদন"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765405670/sonali-magi-rangpur-3_mkmmxn.mp4",
+                "alt": "ডবকা মাগি হোটেলে নিয়ে চুদন"
+            }, 
+            {
+                "image": "https://res.cloudinary.com/disivcuqr/video/upload/v1765405670/sonali-magi-rangpur-3_mkmmxn.mp4",
+                "alt": "ডবকা মাগি হোটেলে নিয়ে চুদন"
+            }, 
+        ];
+        const galleryGrid = document.getElementById('galleryGrid');
+        galleryArray.forEach((item, index) => {
+            galleryGrid.innerHTML += `
+                <div class="galleryItem text-black text-sm font-semibold relative  group">
+                    <video controls src="${item.image}" alt="${item.alt}" class="w-full aspect-[4x3] object-contain relative z-10" width="400" height="700"></video>
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-900 px-2 py-1 text-base rounded">ছবি ${index + 1}</span>
+                    <span class="text-black block p-3 text-xs lg:text-sm bg-black/0 w-full">${item.alt}</span>
+                </div>
+            `;
+        });
+    </script>
+     
+</body>
+
+</html>
